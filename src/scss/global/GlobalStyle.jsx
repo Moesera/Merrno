@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: var(--font-fam);
     color: white;
     font-size: 1.6rem;
-    background: #2D3250;
+    background: #474953;
     margin: 0rem 0.5rem;
   }
 

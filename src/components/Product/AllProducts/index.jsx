@@ -7,7 +7,6 @@ import ProductPrice from "../PriceCalculation/index";
 function AllProducts({ products }) {
   return (
     <S.Container>
-      <h1>Home</h1>
       {products.map((product) => {
         return (
           <Link key={product.id} to={`/product/${product.id}`}>

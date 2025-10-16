@@ -59,7 +59,6 @@ function ProductFetch() {
   return (
     <div className={styles.pageWrapper}>
       <ToastContainer />
-      <h1>{product.title}</h1>
       <div className={styles.container}>
         <S.Card className={C.bigCard}>
           <figure>
