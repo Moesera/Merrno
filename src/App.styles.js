@@ -10,6 +10,7 @@ export const PageContainer = styled.div`
   min-height: 100%;
 
   h1 {
+  text-align: center;
   }
 
   @media (min-width: 530px) {
@@ -77,7 +78,7 @@ export const AsideFeature = styled.aside`
   }
 
   img {
-    background: #f8b179;
+    background: #676f9d;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     :hover {
       box-shadow: rgba(248, 177, 121, 0.35) 0px 5px 15px;
@@ -184,7 +185,7 @@ export const SearchBar = styled.div`
     border-radius: 5rem;
     padding: 0.25rem 1rem;
     width: 4rem;
-    background: #f8b179;
+    background: #676f9d;
     position: absolute;
     right: 13.5rem;
     cursor: pointer;
