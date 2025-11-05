@@ -12,6 +12,8 @@
 }
 
 .pageWrapper {
+  display: flex;
+  flex-direction: column;
   @media (min-width: 780px) {
     display: flex;
     gap: 1rem;
