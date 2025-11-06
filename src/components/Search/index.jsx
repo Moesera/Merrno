@@ -67,7 +67,6 @@ const ComponentWithInput = ({ onClick }) => {
                       <img src={product.imageUrl} alt={product.title} />
                     </figure>
                     <h2>{product.title}</h2>
-                    <p>Price: {product.discountedPrice},-</p>
                   </li>
                 </Link>
               );
