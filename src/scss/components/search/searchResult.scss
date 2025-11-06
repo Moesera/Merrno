@@ -1,7 +1,7 @@
 .scroll-box {
   position: fixed;
   inset: 8.1rem 0.7rem 9rem 0.7rem;
-  background: #2d3250;
+  background: var(--main-color);
   height: 51vh;
   border-bottom: solid 0.2rem;
   border-color: #424669;
@@ -29,7 +29,6 @@
     gap: 1rem;
     align-items: center;
     padding: 0.5rem;
-    background: #95bee0;
     margin: 0.5rem;
     border-radius: 0.5rem;
     font-size: 1.1rem;
