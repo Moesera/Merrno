@@ -56,7 +56,6 @@ const ComponentWithInput = ({ onClick }) => {
           <ol className="search-result">
             {filteredProducts.map((product) => {
               return (
-                //* Find another method to also hide search or the search bar.
                 <Link
                   key={product.id}
                   to={`/product/${product.id}`}
@@ -78,15 +77,13 @@ const ComponentWithInput = ({ onClick }) => {
   );
 };
 
-// ! Fuck this, this is bad UX ! Handle it better.
-
 /**
  * Renders the search input
  */
 function SearchBar() {
   return (
     <div className="element-border full-width">
-        <ComponentWithInput />
+      <ComponentWithInput />
     </div>
   );
 }
