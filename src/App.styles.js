@@ -171,13 +171,11 @@ export const SearchBar = styled.div`
     background: #f8b179;
     color: #676f9d;
     font-size: 1.2rem;
-    box-shadow: rgba(248, 177, 121, 0.35) 0px 5px 15px;
     ::placeholder {
       color: #2d3250;
     }
     :focus {
       outline: #2d3250;
-      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
   }
 
