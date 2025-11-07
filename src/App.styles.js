@@ -183,7 +183,6 @@ export const SearchBar = styled.div`
     border-radius: 5rem;
     padding: 0.25rem 1rem;
     width: 4rem;
-    background: #676f9d;
     position: absolute;
     right: 13.5rem;
     cursor: pointer;
