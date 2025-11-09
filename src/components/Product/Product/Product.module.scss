@@ -4,9 +4,12 @@
   gap: 15px;
   h2 {
     font-size: 13px;
+    @media (min-width: 600px) { 
+      font-size: 15px;
+    }
   }
   p {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -39,6 +42,10 @@
 
   > h2:first-of-type {
     font-size: 20px;
+
+    @media (min-width: 600px) { 
+      font-size: 25px;  
+    }
   }
   > div h2:first-of-type {
     font-weight: 600;
