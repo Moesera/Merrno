@@ -9,6 +9,8 @@ export const PageContainer = styled.div`
 
   h1 {
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
   }
 
   @media (min-width: 530px) {
@@ -23,7 +25,6 @@ export const PageContainer = styled.div`
   }
 
   @media (min-width: 1120px) {
-    display: flex;
     gap: 1.5rem;
     width: 75%;
     margin: 0 auto;
@@ -167,7 +168,6 @@ export const SearchBar = styled.div`
     border-radius: 5rem;
     border: none;
     background: #f8b179;
-    color: #676f9d;
     font-size: 1.2rem;
     ::placeholder {
       color: #2d3250;
