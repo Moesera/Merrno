@@ -3,10 +3,8 @@ import "./scss/components/_variables.scss";
 
 // Containers
 export const PageContainer = styled.div`
-  border: solid 0.1rem #676f9d;
   border-radius: 0.5rem;
   padding: 9rem 1rem 10rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   min-height: 100%;
 
   h1 {
