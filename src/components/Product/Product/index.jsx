@@ -8,8 +8,7 @@ import { useStore } from "../../../hooks/useProductStore";
 
 import * as S from "../../../App.styles";
 import styles from "../../../pages/product/Product.module.scss";
-import C from "../../../scss/modules/cards/Card.module.scss";
-import F from "../../../scss/modules/pageFeature/Feature.module.scss";
+import productStyles from "./Product.module.scss";
 
 const url = "https://api.noroff.dev/api/v1/online-shop/";
 
@@ -31,8 +30,8 @@ function ProductFetch() {
         const json = await res.json();
 
         setProduct(json);
+        console.log(json);
       } catch (err) {
-        console.log(err);
         setIsError(true);
       } finally {
         setIsLoading(false);
@@ -59,60 +58,63 @@ function ProductFetch() {
   return (
     <div className={styles.pageWrapper}>
       <ToastContainer />
-      <h1>{product.title}</h1>
-      <div className={styles.container}>
-        <S.Card className={C.bigCard}>
+
+      <article className={productStyles.product}>
+
+        {/* Product showcase */}
+        <div className={productStyles.productHeading}>
           <figure>
             <img src={product.imageUrl} alt={product.title} />
           </figure>
+        </div>
 
-          <h2>Price</h2>
-          <ProductPrice price={product.price} discount={product.discountedPrice}></ProductPrice>
-
+        {/* Product details */}
+        <section aria-labelledby="details" className={productStyles.productDetails}>
+          <h2 className={productStyles.productTitle}>{product.title}</h2>
+          
           <div>
-            <S.Button onClick={addToCartButton}>Add to cart</S.Button>
-          </div>
-        </S.Card>
-        <S.Card className={C.bigCard}>
-          <section>
-            <h2>Description</h2>
             <p>{product.description}</p>
-          </section>
+          </div>
 
-          <section>
-            <h2>Categories</h2>
-            <div className={styles.prodTags}>
-              {product.tags.map((tag, index) => {
-                return <p key={index}>{tag}</p>;
-              })}
+          <div aria-labelledby="categories">
+            <h2>Category</h2>
+            <div className={productStyles.prodTags}>
+              <p>{product.tags.join(", ")}</p>
             </div>
-          </section>
+          </div>
 
-          <section className={styles.productRating}>
+          <section className={productStyles.productRating}>
             <h2>Rating</h2>
             <p>{product.rating} / 5</p>
           </section>
-        </S.Card>
-      </div>
 
-      <S.AsideFeature className={F.featureButton}>
-        <section className={styles.reviewSection}>
-          <h2>Reviews</h2>
-          {product.reviews.length > 0 ? (
-            product.reviews.map((review) => {
-              return (
-                <S.Card key={review.id} className={styles.review}>
-                  <h2>{review.username}</h2>
-                  <p>{review.description}</p>
-                  <p className={styles.rating}>Rated: {review.rating} / 5</p>
-                </S.Card>
-              );
-            })
-          ) : (
-            <div>Product has no reviews</div>
-          )}
+          <section aria-labelledby="pricing" className={productStyles.priceBlock}>
+            <h2>Price</h2>
+            <div>
+              <ProductPrice className={productStyles.priceTag} price={product.price} discount={product.discountedPrice}/>
+              <S.Button onClick={addToCartButton}>Add to cart</S.Button>
+            </div>
+          </section>
         </section>
-      </S.AsideFeature>
+
+      </article>
+
+      <section className={productStyles.reviewSection}>
+        <h2>Reviews</h2>
+        {product.reviews.length > 0 ? (
+          product.reviews.map((review) => {
+            return (
+              <S.Card key={review.id} className={productStyles.review}>
+                <h2>{review.username}</h2>
+                <p>{review.description}</p>
+                <p className={styles.rating}>Rated: {review.rating} / 5</p>
+              </S.Card>
+            );
+          })
+        ) : (
+          <div>Product has no reviews</div>
+        )}
+      </section>
     </div>
   );
 }

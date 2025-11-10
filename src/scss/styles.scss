@@ -4,7 +4,6 @@
 .element-border {
   display: flex;
   align-items: center;
-  justify-content: center;
   border: solid 0.1rem #676f9d;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -14,7 +13,7 @@
 
 li a {
   img:hover {
-    box-shadow: rgba(248, 177, 121, 0.35) 0px 5px 15px;
+    box-shadow: rgba(221, 216, 213, 0.35) 0px 5px 15px;
   }
 }
 
