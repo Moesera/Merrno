@@ -11,9 +11,10 @@ function Home() {
   return (
     <S.PageContainer>
       <div className={styles.pageWrapper}>
-      <AllProducts products={products} onFilter={filteredProducts}/>
-        </div>
-      </S.PageContainer>
+        <h1>Products</h1>
+        <AllProducts products={products} onFilter={filteredProducts}/>
+      </div>
+    </S.PageContainer>
   );
 }
 

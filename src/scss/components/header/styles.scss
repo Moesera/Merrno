@@ -3,7 +3,7 @@ header {
   flex-direction: column;
   position: fixed;
   inset: auto 0.5rem;
-  background: #2d3250;
+  background: #474953;
 
   @media (min-width: 1120px) {
     width: 75%;
@@ -18,10 +18,8 @@ header {
 
   nav {
     display: flex;
-
     ul {
       display: flex;
-
       li {
         text-align: center;
       }
@@ -31,14 +29,13 @@ header {
         padding: 0.1rem 1rem;
         width: 4rem;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-        background: #f8b179;
+        background: #95bee0;
       }
     }
   }
 }
 
 .logo {
-  font-weight: var(--font-bold);
   font-size: 2.2rem;
   text-shadow: rgba(103, 111, 157, 0.9) 0px 3px 4px;
   text-transform: uppercase;

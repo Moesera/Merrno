@@ -7,8 +7,6 @@ export const DataContext = createContext();
 
 function Layout() {
   const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -17,21 +15,12 @@ function Layout() {
 
       setProducts(json);
     }
+
     fetchData();
-  }, []);
-
-  const handleFilter = (term) => {
-    setSearchTerm(term);
-
-    const filteredData = products.filter((product) =>
-      product.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    
-    setFilteredProducts(filteredData);
-  };
+  }, [setProducts]);
 
   return (
-    <DataContext.Provider value={{products, filteredProducts, handleFilter, searchTerm }}> 
+    <DataContext.Provider value={{ products }}>
       <Header />
       <Outlet />
     </DataContext.Provider>
