@@ -111,7 +111,7 @@ aside form {
 
   :focus {
     outline: solid #2d3250;
-    box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset, rgba(66, 70, 105, 0.5) -3px -3px 6px 1px inset;
+    box-shadow: rgb(0, 0, 0) 0px 1px 2px 0px inset, rgba(66, 70, 105, 0.5) -3px -3px 6px 1px inset;
   }
   ::placeholder {
     color: white;
@@ -119,8 +119,8 @@ aside form {
   input,
   textarea {
     color: white;
-    background-color: #2d3250;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #474953;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 15px;
     border-style: none;
     border: 0.1rem solid #676f9d;
     font-size: 1.3rem;

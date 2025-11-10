@@ -3,29 +3,14 @@ import "./scss/components/_variables.scss";
 
 // Containers
 export const PageContainer = styled.div`
-  border: solid 0.1rem #676f9d;
   border-radius: 0.5rem;
   padding: 9rem 1rem 10rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   min-height: 100%;
 
   h1 {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: var(--font-bold);
-    position: fixed;
-    inset: auto 0.5rem 0rem;
-    background: #2d3250;
-    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 0.5rem;
-    border: solid 0.1rem #676f9d;
-    border-bottom: none;
-    padding: 0.5rem;
-    font-size: 2rem;
-    @media (min-width: 1120px) {
-      width: 75%;
-      margin: 0 auto;
-    }
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
   }
 
   @media (min-width: 530px) {
@@ -40,7 +25,6 @@ export const PageContainer = styled.div`
   }
 
   @media (min-width: 1120px) {
-    display: flex;
     gap: 1.5rem;
     width: 75%;
     margin: 0 auto;
@@ -81,7 +65,7 @@ export const AsideFeature = styled.aside`
   display: flex;
   overflow-x: scroll;
   border: 0.1rem solid #676f9d;
-  background: #2d3250;
+  background: #474953;
   inset: auto 0.5rem 0;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
@@ -93,7 +77,7 @@ export const AsideFeature = styled.aside`
   }
 
   img {
-    background: #f8b179;
+    background: #676f9d;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     :hover {
       box-shadow: rgba(248, 177, 121, 0.35) 0px 5px 15px;
@@ -142,8 +126,9 @@ export const imgBox = styled.img`
 
 // Common Card style
 export const Card = styled.div`
-  background: #424669;
+  background: #474953;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: solid 0.1rem #676f9d;
   border-radius: 1rem;
 `;
 
@@ -173,7 +158,6 @@ export const Breadcrumb = styled.ul`
 `;
 
 // Search
-
 export const SearchBar = styled.div`
   display: flex;
   width: 100%;
@@ -184,15 +168,12 @@ export const SearchBar = styled.div`
     border-radius: 5rem;
     border: none;
     background: #f8b179;
-    color: #2d3250;
     font-size: 1.2rem;
-    box-shadow: rgba(248, 177, 121, 0.35) 0px 5px 15px;
     ::placeholder {
       color: #2d3250;
     }
     :focus {
       outline: #2d3250;
-      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
   }
 
@@ -200,7 +181,6 @@ export const SearchBar = styled.div`
     border-radius: 5rem;
     padding: 0.25rem 1rem;
     width: 4rem;
-    background: #f8b179;
     position: absolute;
     right: 13.5rem;
     cursor: pointer;

@@ -1,5 +1,4 @@
 # Merrno
-![image](https://github.com/Sigvel/Merrno/assets/89355439/bd2094d7-a216-41f3-b55b-89bd16010622)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8c5bb591-56b4-4b51-845c-56c8e62bcc12/deploy-status)](https://app.netlify.com/sites/sensational-naiad-7cfd07/deploys)
 
